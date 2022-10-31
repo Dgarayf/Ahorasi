@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Ahorasi.Permisos;
-
+using Ahorasi.Models;
 using Ahorasi.BD;
 
 
@@ -21,13 +21,15 @@ namespace Ahorasi.Controllers
         private UsuariosEntities db = new UsuariosEntities();
 
         // GET: Usuarios
-        [PermisosRol(Models.Rol.Seguridad)]
+
+        [PermisosRol(Models.Rol.Administrador)]
         public ActionResult Index()
         {
             return View(db.Usuarios.ToList());
         }
 
         // GET: Usuarios/Details/5
+        
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,6 +45,7 @@ namespace Ahorasi.Controllers
         }
 
         // GET: Usuarios/Create
+
         public ActionResult Create()
         {
             return View();
@@ -66,6 +69,7 @@ namespace Ahorasi.Controllers
         }
 
         // GET: Usuarios/Edit/5
+    
         public ActionResult Edit(int? id)
         {
             if (id == null)

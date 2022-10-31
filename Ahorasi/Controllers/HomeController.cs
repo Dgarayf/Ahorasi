@@ -56,5 +56,12 @@ namespace Ahorasi.Controllers
         }
 
 
+        [HttpPost]
+        public ActionResult Registro()
+        {
+            return RedirectToAction("Registro", "Acceso");
+        }
+
+
     }
 }

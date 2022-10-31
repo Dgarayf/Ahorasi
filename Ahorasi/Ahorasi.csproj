@@ -274,9 +274,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Estilos\JavaScript.js" />
     <Content Include="Estilos\StyleSheet1.css" />
     <Content Include="Estilos\StyleSheet2.css" />
     <Content Include="Estilos\StyleSheet3.css" />
+    <Content Include="Estilos\StyleSheet4.css" />
+    <Content Include="Estilos\StyleSheet5.css" />
+    <Content Include="Estilos\StyleSheet6.css" />
+    <Content Include="Estilos\StyleSheet7.css" />
+    <Content Include="Estilos\StyleSheet8.css" />
+    <Content Include="Estilos\StyleSheet9.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -290,6 +297,7 @@
     <Content Include="BD\Parqueadero.edmx.diagram">
       <DependentUpon>Parqueadero.edmx</DependentUpon>
     </Content>
+    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -327,6 +335,7 @@
     <Content Include="Views\VehiculosRs\Index.cshtml" />
     <Content Include="Views\Acceso\Index.cshtml" />
     <Content Include="Views\Home\SinPermiso.cshtml" />
+    <Content Include="Views\Acceso\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

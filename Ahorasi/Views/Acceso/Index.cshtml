@@ -13,7 +13,7 @@
 </head>
 <body>       
                 <div class="login-box">
-                    <img src="~/Estilos/avatar.png" class="avatar"  />
+                    <img src="~/Estilos/avatar.jpg" class="avatar"  />
                     <h1>Login Here</h1>
                     <form action="@Url.Action("Index","Acceso")" method="post">
                         
@@ -26,10 +26,12 @@
                         <input type="submit" name="submit" value="Login" />
 
                     </form>
+                    <p>Cuentas para ingresar</p>
+                    <h9>tlopza@gmail.com -- 123 -- Administrador</h9>
+                    <h9>dgarayf@gmail.com -- 456 -- Seguridad</h9>
+                    <h9>cgarayb@gmail.com -- 789 -- Estudiante</h9>
                 </div>
-            </div>
-
-        </div>
+    
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
 </body>

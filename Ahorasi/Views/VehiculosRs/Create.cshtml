@@ -4,34 +4,35 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Create</h2>
+<link rel="stylesheet" href="~/Estilos/StyleSheet4.css"/>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
+<div class="todo">
     
-    <div class="form-horizontal">
-        <h4>VehiculosR</h4>
-        <hr />
+    <div class="info">
+        <h2>Create</h2>
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                <input type="datetime-local" name="Fecha" class="form-control" />
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.TipoVehiculo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TipoVehiculo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TipoVehiculo, "", new { @class = "text-danger" })
+            <div class="col-md-10">               
+                <select class="form-control" name="TipoVehiculo">
+                    <option>Seleccione..</option>
+                    <option>Carro</option>
+                    <option>Moto</option>
+                </select>
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.Color, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -69,12 +70,14 @@
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
+
+        <button>@Html.ActionLink("Back to List", "Index")</button>
+
     </div>
+</div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
