@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 
 using Ahorasi.Permisos;
-using Ahorasi.Models;
+
 using Ahorasi.BD;
 
 
